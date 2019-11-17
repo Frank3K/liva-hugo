@@ -16,15 +16,19 @@
   });
 
   // featured post slider
-  $('.featured-post-slider').slick({
-    infinite: true,
-    vertical: true,
-    verticalSwiping: true,
-    arrows: false,
-    dots: true
-  });
+  if (typeof $.fn.slick === "function") {
+    $('.featured-post-slider').slick({
+      infinite: true,
+      vertical: true,
+      verticalSwiping: true,
+      arrows: false,
+      dots: true
+    });
+  }
 
   // venobox initialize
-  $('.venobox').venobox(); 
+  if (typeof $.fn.venobox === "function") {
+    $('.venobox').venobox();
+  }
 
 })(jQuery);
